@@ -115,7 +115,7 @@ let mapleader = " "
 inoremap jj <esc>
 
 " toggle code folding with space
-nnoremap <leader> <Space> za
+nnoremap <leader><Space> za
 
 " no higlight with leader-slash in normal mode
 nnoremap <leader>/ :noh<CR>

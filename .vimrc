@@ -87,6 +87,9 @@ set foldmethod=syntax
 " Open files without folds
 set nofoldenable
 
+" Backspace behavior
+set backspace=indent,eol,start
+
 " }}}
 
 

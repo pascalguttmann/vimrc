@@ -120,6 +120,10 @@ nnoremap <leader><Space> za
 " no higlight with leader-slash in normal mode
 nnoremap <leader>/ :noh<CR>
 
+" cycle buffers with leader n/N
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>N :bN<CR>
+
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

@@ -106,7 +106,11 @@ call plug#end()
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
+" Escape with jj from insert mode
 inoremap jj <esc>
+
+" no higlight with space in normal mode
+nnoremap <Space> :noh<CR>
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
@@ -173,7 +177,7 @@ if has('gui_running')
       elseif has("gui_macvim")
         set guifont=Menlo\ Regular:h14
       elseif has("gui_win32")
-        set guifont=Consolas:h13:cANSI
+        set guifont=Cascadia_Mono:h14:cANSI
       endif
     endif
 

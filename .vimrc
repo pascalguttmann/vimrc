@@ -83,7 +83,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Folding
 " Foldingmethod eg. 'syntax' or 'indent'
-set foldmethod=syntax
+set foldmethod=indent
 " Open files without folds
 set nofoldenable
 
@@ -99,6 +99,7 @@ set backspace=indent,eol,start
 " specify plugins by github 'username/plugin-name'
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
+    Plug 'dense-analysis/ale'
 call plug#end()
 
 " }}}
@@ -106,11 +107,18 @@ call plug#end()
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
+" Set the mapleader
+nnoremap <Space> <nop>
+let mapleader = " "
+
 " Escape with jj from insert mode
 inoremap jj <esc>
 
-" no higlight with space in normal mode
-nnoremap <Space> :noh<CR>
+" toggle code folding with space
+nnoremap <leader> <Space> za
+
+" no higlight with leader-slash in normal mode
+nnoremap <leader>/ :noh<CR>
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
@@ -124,9 +132,6 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
-
-" Set the mapleader
-let mapleader = ","
 
 " }}}
 

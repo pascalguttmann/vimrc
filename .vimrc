@@ -153,6 +153,7 @@ augroup END
 augroup f2_build
     autocmd!
     autocmd FileType python nnoremap <buffer> <F2> :w<CR> :!py %<CR>
+    autocmd FileType python inoremap <buffer> <F2> <Esc>:w<CR> :!py %<CR>
     autocmd FileType vim nnoremap <buffer> <F2> :w<CR> :so %<CR>
 augroup END
 

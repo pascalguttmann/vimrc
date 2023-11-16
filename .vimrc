@@ -157,6 +157,12 @@ augroup f2_build
     autocmd FileType vim nnoremap <buffer> <F2> :w<CR> :so %<CR>
 augroup END
 
+augroup f3_func
+    autocmd!
+    autocmd FileType python nnoremap <buffer> <F3> :w<CR> :!py<CR>
+    autocmd FileType python inoremap <buffer> <F3> <Esc>:w<CR> :!py<CR>
+augroup END
+
 augroup f5_debug
     autocmd!
     autocmd FileType python nnoremap <buffer> <F5> :w<CR> :!py -m pdb %<CR>

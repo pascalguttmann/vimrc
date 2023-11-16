@@ -114,6 +114,9 @@ let mapleader = " "
 " Escape with jj from insert mode
 inoremap jj <esc>
 
+" write file
+nnoremap <leader>w :w<CR>
+
 " toggle code folding with space
 nnoremap <leader><Space> za
 

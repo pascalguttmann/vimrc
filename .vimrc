@@ -157,6 +157,12 @@ augroup f2_build
     autocmd FileType vim nnoremap <buffer> <F2> :w<CR> :so %<CR>
 augroup END
 
+augroup f5_debug
+    autocmd!
+    autocmd FileType python nnoremap <buffer> <F5> :w<CR> :!py -m pdb %<CR>
+    autocmd FileType python inoremap <buffer> <F5> <Esc>:w<CR> :!py -m pdb %<CR>
+augroup END
+
 " If the current file type is HTML, set indentation to 2 spaces.
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 

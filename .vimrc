@@ -155,12 +155,21 @@ augroup f2_build
     autocmd FileType python nnoremap <buffer> <F2> :w<CR> :!py %<CR>
     autocmd FileType python inoremap <buffer> <F2> <Esc>:w<CR> :!py %<CR>
     autocmd FileType vim nnoremap <buffer> <F2> :w<CR> :so %<CR>
+    autocmd BufNewFile,BufRead *.tex
+                \ nnoremap <buffer> <F2> :w<CR> :!latexmk -pdf main.tex<CR>
 augroup END
 
 augroup f3_func
     autocmd!
     autocmd FileType python nnoremap <buffer> <F3> :w<CR> :!py<CR>
     autocmd FileType python inoremap <buffer> <F3> <Esc>:w<CR> :!py<CR>
+augroup END
+
+augroup f4_clean
+    autocmd!
+    autocmd BufNewFile,BufRead *.tex
+                \ nnoremap <buffer> <F4> :!del main.aux main.bbl main.bcf main.blg
+                \ main.fdb_latexmk main.fls main.log main.run.xml main.pdf
 augroup END
 
 augroup f5_debug

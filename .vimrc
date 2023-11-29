@@ -105,6 +105,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'dense-analysis/ale'
 call plug#end()
 
+" ale configuration
+let b:ale_linters = {
+\   'plaintex': ['chktex'],
+\}
+
 " }}}
 
 

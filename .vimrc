@@ -56,6 +56,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Use spellcheck
+set spell spelllang=en_us,de_20
+
 " Show partial command you type in the last line of the screen.
 set showcmd
 

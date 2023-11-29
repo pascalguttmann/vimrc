@@ -59,6 +59,10 @@ set smartcase
 " Use spellcheck
 set spell spelllang=en_us,de_20
 
+" textwidth and colorcolumn
+set textwidth=100
+set colorcolumn=+0,-8
+
 " Show partial command you type in the last line of the screen.
 set showcmd
 
@@ -246,6 +250,9 @@ if has('gui_running')
     set guioptions-=b
 
 endif
+
+" colorcolumn color definition
+highlight ColorColumn ctermbg=8 guibg=grey30
 
 " }}}
 

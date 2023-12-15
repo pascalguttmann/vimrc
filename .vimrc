@@ -139,6 +139,10 @@ nnoremap <leader>/ :noh<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>N :bN<CR>
 
+" go to and correct words from spellcheck
+nnoremap <leader>s ]sz=
+nnoremap <leader>S [sz=
+
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

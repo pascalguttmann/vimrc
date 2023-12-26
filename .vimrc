@@ -217,14 +217,14 @@ augroup cursor_off
 augroup END
 
 
+" Set the color scheme.
+colorscheme molokai
+
 " If GUI version of Vim is running set these options.
 if has('gui_running')
 
     " Set the background tone.
     set background=dark
-
-    " Set the color scheme.
-    colorscheme molokai
 
     " Set a custom font you have installed on your computer.
     if has("gui_running")

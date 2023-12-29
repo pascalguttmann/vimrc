@@ -114,9 +114,6 @@ call plug#begin('~/.vim/plugged')
                 \}
     Plug 'godlygeek/tabular'
     Plug 'sheerun/vim-polyglot'
-    Plug 'prettier/vim-prettier', {
-                \ 'do' : 'yarn install',
-                \}
     Plug 'tpope/vim-surround',
 call plug#end()
 
@@ -199,11 +196,6 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
     "autocmd FileType vim setlocal foldmarker={{{,}}}
-augroup END
-
-augroup filetype_markdown
-    autocmd!
-    autocmd BufWritePre *.md :Prettier<CR>
 augroup END
 
 augroup f2_build

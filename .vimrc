@@ -114,6 +114,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'prettier/vim-prettier', {
                 \ 'do' : 'yarn install',
                 \}
+    Plug 'tpope/vim-surround',
 call plug#end()
 
 " ale configuration

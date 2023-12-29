@@ -11,4 +11,4 @@ MD033: false
 MD013: false
 
 # Ignore Multiple header 1 (as yaml frontmatter triggers this rule)
-MD025: true
+MD025: false

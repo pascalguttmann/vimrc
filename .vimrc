@@ -9,6 +9,9 @@ set runtimepath+=~/.vim/after
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
+" autowrite on buffer change
+set autowrite
+
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
 
@@ -126,7 +129,6 @@ let g:ale_linters = {
 \}
 let g:ale_fixers = {
 \   '*': ['trim_whitespace', 'remove_trailing_lines'],
-\   'markdown': ['prettier'],
 \}
 
 " vim-polyglot configuration
@@ -140,8 +142,6 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_autowrite = 1
-
-" prettier config
 
 " tabular configuration
 command! -range -nargs=* Tab Tabularize
@@ -199,6 +199,11 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
     "autocmd FileType vim setlocal foldmarker={{{,}}}
+augroup END
+
+augroup filetype_markdown
+    autocmd!
+    autocmd BufWritePre *.md :Prettier<CR>
 augroup END
 
 augroup f2_build

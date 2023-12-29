@@ -106,13 +106,44 @@ set backspace=indent,eol,start
 " specify plugins by github 'username/plugin-name'
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
-    Plug 'dense-analysis/ale'
+    Plug 'dense-analysis/ale', {
+                \ 'do' : 'npm install -g markdownlint-cli',
+                \}
+    Plug 'godlygeek/tabular'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'prettier/vim-prettier', {
+                \ 'do' : 'yarn install',
+                \}
 call plug#end()
 
 " ale configuration
-let b:ale_linters = {
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_linters = {
 \   'plaintex': ['chktex'],
+\   'markdown': ['markdownlint'],
 \}
+let g:ale_fixers = {
+\   '*': ['trim_whitespace', 'remove_trailing_lines'],
+\   'markdown': ['prettier'],
+\}
+
+" vim-polyglot configuration
+let g:vim_markdown_folding_disabled = 0
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_autowrite = 1
+
+" prettier config
+
+" tabular configuration
+command! -range -nargs=* Tab Tabularize
 
 " }}}
 
@@ -279,4 +310,3 @@ set statusline+=\ ascii:\ %b\ (0x%B)\ r%l\ c%c\ (%p%%)
 set laststatus=2
 
 " }}}
-

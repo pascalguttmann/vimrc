@@ -1,0 +1,7 @@
+overrides:
+  - files:
+      - "*.md"
+      - "*.markdown"
+    options:
+      parser: "markdown"
+      proseWrap: "always"

@@ -141,7 +141,7 @@ let g:vim_markdown_math = 1
 let g:vim_markdown_autowrite = 1
 
 " tabular configuration
-command! -range -nargs=* Tab Tabularize
+command! -range -nargs=* Tab Tabularize <args>
 
 " }}}
 

@@ -63,7 +63,7 @@ set smartcase
 set spell spelllang=en_us,de_20
 
 " textwidth and colorcolumn
-set textwidth=100
+set textwidth=80
 set colorcolumn=+0,-8
 
 " Show partial command you type in the last line of the screen.
@@ -172,6 +172,9 @@ nnoremap <leader>N :bN<CR>
 " go to and correct words from spellcheck
 nnoremap <leader>s ]sz=
 nnoremap <leader>S [sz=
+
+" open nerdtree at current file
+nnoremap <leader>t :NERDTreeFind<CR>
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j

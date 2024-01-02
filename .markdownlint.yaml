@@ -12,3 +12,6 @@ MD013: false
 
 # Ignore Multiple header 1 (as yaml frontmatter triggers this rule)
 MD025: false
+
+# Ignore unordert list indent of 2
+MD007: false

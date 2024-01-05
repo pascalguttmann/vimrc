@@ -118,6 +118,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 call plug#end()
 
+" nerdtree configuration
+let NERDTreeShowHidden = 1
+
 " ale configuration
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1

@@ -160,7 +160,7 @@ let mapleader = " "
 inoremap jj <esc>
 
 " close vim
-inoremap <leader>q :q<CR>
+nnoremap <leader>q :q<CR>
 
 " write file
 nnoremap <leader>w :w<CR>

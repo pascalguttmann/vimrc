@@ -156,6 +156,9 @@ let mapleader = " "
 " Escape with jj from insert mode
 inoremap jj <esc>
 
+" close vim
+inoremap <leader>q :q<CR>
+
 " write file
 nnoremap <leader>w :w<CR>
 
@@ -168,6 +171,9 @@ nnoremap <leader>/ :noh<CR>
 " cycle buffers with leader n/N
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>N :bN<CR>
+" delete buffer
+nnoremap <leader>d :bd<CR>
+
 
 " go to and correct words from spellcheck
 nnoremap <leader>s ]sz=

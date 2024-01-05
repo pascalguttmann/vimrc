@@ -173,8 +173,13 @@ nnoremap <leader>N :bN<CR>
 nnoremap <leader>s ]sz=
 nnoremap <leader>S [sz=
 
-" open nerdtree at current file
-nnoremap <leader>t :NERDTreeFind<CR>
+" open terminal
+nnoremap <leader>t :below term ++close "C:\Program Files\Git\bin\bash.exe" -i -l<CR>
+nnoremap <leader>T :below term ++close<CR>
+
+" open nerdtree
+nnoremap <leader>f :NERDTreeCWD<CR>
+nnoremap <leader>F :NERDTreeFind<CR>
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j

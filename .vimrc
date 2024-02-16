@@ -115,6 +115,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'godlygeek/tabular'
     Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-surround',
+    Plug 'michaeljsmith/vim-indent-object'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 call plug#end()
 

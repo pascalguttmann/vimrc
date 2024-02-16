@@ -204,6 +204,12 @@ noremap <c-down> <c-w>-
 noremap <c-left> <c-w><
 noremap <c-right> <c-w>>
 
+" Text objects $...$ for Math editing
+:onoremap <silent> i$ :<c-u>normal! T$vt$<cr>
+:vnoremap i$ T$ot$
+:onoremap <silent> a$ :<c-u>normal! F$vf$<cr>
+:vnoremap a$ F$of$
+
 " }}}
 
 

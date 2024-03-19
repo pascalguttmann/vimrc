@@ -116,6 +116,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-surround',
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
+    Plug 'kaarmu/typst.vim'
 call plug#end()
 
 " nerdtree configuration
@@ -129,7 +130,7 @@ let g:ale_linters = {
 \   'markdown': ['markdownlint'],
 \}
 let g:ale_fixers = {
-\   '*': ['trim_whitespace', 'remove_trailing_lines'],
+\   '*': ['trim_whitespace'],
 \}
 
 " vim-polyglot configuration
@@ -143,6 +144,9 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_autowrite = 1
+
+" typst.vim configuration
+let g:typst_pdf_viewer = evince
 
 " tabular configuration
 command! -range -nargs=* Tab Tabularize <args>
@@ -221,7 +225,7 @@ augroup f2_build
     autocmd FileType python nnoremap <buffer> <F2> :w<CR> :!py %<CR>
     autocmd FileType python inoremap <buffer> <F2> <Esc>:w<CR> :!py %<CR>
     autocmd FileType vim nnoremap <buffer> <F2> :w<CR> :so %<CR>
-    autocmd BufNewFile,BufRead *.tex
+    autocmd BufNewFile,BufRead,BufEnter *.tex
                 \ nnoremap <buffer> <F2> :w<CR> :!latexmk -pdf main.tex<CR>
 augroup END
 
@@ -233,7 +237,7 @@ augroup END
 
 augroup f4_clean
     autocmd!
-    autocmd BufNewFile,BufRead *.tex
+    autocmd BufNewFile,BufRead,BufEnter *.tex
                 \ nnoremap <buffer> <F4> :!del main.aux main.bbl main.bcf main.blg
                 \ main.fdb_latexmk main.fls main.log main.run.xml main.pdf
 augroup END

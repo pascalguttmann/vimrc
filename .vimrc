@@ -147,7 +147,7 @@ let g:vim_markdown_math = 1
 let g:vim_markdown_autowrite = 1
 
 " typst.vim configuration
-let g:typst_pdf_viewer = evince
+let g:typst_pdf_viewer = "evince"
 
 " tabular configuration
 command! -range -nargs=* Tab Tabularize <args>

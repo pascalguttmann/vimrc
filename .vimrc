@@ -243,7 +243,7 @@ augroup f3_func
     autocmd FileType python nnoremap <buffer> <F3> :w<CR> :!py<CR>
     autocmd FileType python inoremap <buffer> <F3> <Esc>:w<CR> :!py<CR>
     autocmd BufNewFile,BufRead,BufEnter *.typ
-                \ nnoremap <buffer> <F3> :w<CR> :!start /b typst watch % --open evince<CR>
+                \ nnoremap <buffer> <F3> :w<CR> :!start typst watch % --open evince<CR>
 augroup END
 
 augroup f4_clean
